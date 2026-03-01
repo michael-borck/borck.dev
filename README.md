@@ -1,5 +1,9 @@
 # Michael Borck - Developer | Educator | Researcher
 
+<!-- BADGES:START -->
+[![resume](https://img.shields.io/badge/-resume-00bcd4?style=flat-square)](https://github.com/topics/resume) [![website](https://img.shields.io/badge/-website-2196f3?style=flat-square)](https://github.com/topics/website) [![css](https://img.shields.io/badge/-css-1572b6?style=flat-square)](https://github.com/topics/css) [![edtech](https://img.shields.io/badge/-edtech-4caf50?style=flat-square)](https://github.com/topics/edtech) [![html](https://img.shields.io/badge/-html-e34f26?style=flat-square)](https://github.com/topics/html) [![javascript](https://img.shields.io/badge/-javascript-f7df1e?style=flat-square)](https://github.com/topics/javascript) [![personal-website](https://img.shields.io/badge/-personal--website-blue?style=flat-square)](https://github.com/topics/personal-website) [![portfolio](https://img.shields.io/badge/-portfolio-blue?style=flat-square)](https://github.com/topics/portfolio) [![research](https://img.shields.io/badge/-research-3f51b5?style=flat-square)](https://github.com/topics/research) [![responsive-design](https://img.shields.io/badge/-responsive--design-blue?style=flat-square)](https://github.com/topics/responsive-design)
+<!-- BADGES:END -->
+
 Welcome to the repository for [michaelborck.dev](https://michaelborck.dev) - the personal website and portfolio of Michael Borck.
 
 ## About Michael

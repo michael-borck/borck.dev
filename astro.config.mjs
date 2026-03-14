@@ -20,6 +20,7 @@ export default defineConfig({
       customCss: ['./src/styles/custom.css'],
       sidebar: [
         { label: 'Home', link: '/' },
+        { label: 'About', link: '/about/' },
         { label: 'Research', link: '/research/' },
       ],
     }),

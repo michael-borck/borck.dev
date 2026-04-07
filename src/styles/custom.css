@@ -196,6 +196,20 @@ code {
   line-height: 1.8;
 }
 
+.about-contact {
+  margin-top: 0.5rem;
+  font-size: 0.9rem !important;
+}
+
+.about-contact a {
+  color: var(--sl-color-accent);
+  text-decoration: none;
+}
+
+.about-contact a:hover {
+  text-decoration: underline;
+}
+
 /* ── Footer ── */
 .site-footer {
   margin-top: 4rem;

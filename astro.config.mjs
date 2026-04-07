@@ -15,9 +15,6 @@ export default defineConfig({
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/michael-borck' },
         { icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/in/michaelborck' },
-        { icon: 'open-book', label: 'Books', href: 'https://books.borck.education' },
-        { icon: 'external', label: 'Borck.Education', href: 'https://borck.education' },
-        { icon: 'external', label: 'LocoLabo', href: 'https://locolabo.org' },
       ],
       customCss: ['./src/styles/custom.css'],
       sidebar: [

@@ -7,10 +7,6 @@ export default defineConfig({
     starlight({
       title: 'borck.dev',
       favicon: '/favicon.svg',
-      logo: {
-        src: './src/assets/logo.svg',
-        replacesTitle: true,
-      },
       description: 'Michael Borck — Builder, educator, researcher',
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/michael-borck' },

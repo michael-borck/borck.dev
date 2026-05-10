@@ -66,13 +66,11 @@ main {
 }
 .name .surname { color: var(--accent); }
 
-.right-col { display: flex; flex-direction: column; }
-
 .role {
   font-size: 0.95rem;
   color: var(--gray-1);
   line-height: 1.7;
-  margin-bottom: 2.5rem;
+  margin-top: 1.25rem;
 }
 
 .links { display: flex; flex-direction: column; gap: 0.55rem; }

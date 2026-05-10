@@ -97,19 +97,18 @@ main {
 
 /* ── Footer ── */
 footer {
-  padding: 1.25rem 2rem;
+  padding: 2rem 1.5rem;
   border-top: 1px solid var(--gray-3);
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-size: 0.72rem;
+  text-align: center;
+  font-size: 0.78rem;
   color: var(--gray-2);
 }
-footer a { color: var(--gray-2); text-decoration: none; transition: color 0.15s; }
-footer a:hover { color: var(--gray-1); }
-footer .sep { color: var(--gray-3); }
-footer .spacer { flex: 1; }
-footer .location { font-family: var(--mono); font-size: 0.68rem; }
+footer .footer-links {
+  display: flex; justify-content: center; gap: 1.25rem;
+  flex-wrap: wrap; margin-bottom: 0.75rem;
+}
+footer a { color: var(--gray-1); text-decoration: none; transition: color 0.15s; }
+footer a:hover { color: var(--accent); }
 
 @media (max-width: 680px) {
   .card { grid-template-columns: 1fr; gap: 2.5rem; }

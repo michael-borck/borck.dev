@@ -1,5 +1,42 @@
 ---
 import '../styles/global.css';
+
+// Canonical Person entity. The shared @id (also used on bigpicture.borck.dev)
+// consolidates the scattered domains into one entity for search + AI answer
+// engines. borck.consulting is intentionally omitted to keep it separate.
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://borck.dev/#michael-borck',
+  name: 'Michael Borck',
+  givenName: 'Michael',
+  familyName: 'Borck',
+  url: 'https://borck.dev',
+  jobTitle: 'Lecturer & AI Facilitator',
+  worksFor: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Curtin University',
+    department: 'School of Marketing and Management, Faculty of Business and Law',
+  },
+  knowsAbout: [
+    'AI in education', 'privacy-first AI', 'local language models',
+    'assessment design', 'educational technology', 'work-integrated learning',
+  ],
+  sameAs: [
+    'https://bigpicture.borck.dev',
+    'https://borck.education',
+    'https://tools.borck.education',
+    'https://books.borck.education',
+    'https://research.borck.dev',
+    'https://resume.borck.dev',
+    'https://locolabo.org',
+    'https://locoensayo.org',
+    'https://conversationnotdelegation.com',
+    'https://github.com/michael-borck',
+    'https://www.linkedin.com/in/michaelborck',
+    'https://orcid.org/0000-0002-0950-6396',
+  ],
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +46,7 @@ import '../styles/global.css';
   <title>Michael Borck</title>
   <meta name="description" content="Builder, educator, researcher, and consultant — helping people work with AI, not around it." />
   <link rel="icon" href="/favicon.svg" />
+  <script type="application/ld+json" set:html={JSON.stringify(person)} />
 </head>
 <body>
 
@@ -28,6 +66,11 @@ import '../styles/global.css';
     </div>
 
     <nav class="links">
+      <a class="link" href="https://bigpicture.borck.dev" title="The big picture — all my AI teaching, tools, and research in one place">
+        <span class="link-label">Big picture</span>
+        <span class="link-dest">bigpicture.borck.dev</span>
+        <span class="link-arrow">→</span>
+      </a>
       <a class="link" href="https://borck.education" title="Tools, books, and teaching for educators and students">
         <span class="link-label">Education</span>
         <span class="link-dest">borck.education</span>
@@ -60,6 +103,7 @@ import '../styles/global.css';
 
 <footer>
   <div class="footer-links">
+    <a href="https://bigpicture.borck.dev">Big picture</a>
     <a href="https://borck.education">Education</a>
     <a href="https://borck.consulting">Consulting</a>
     <a href="https://research.borck.dev">Research</a>

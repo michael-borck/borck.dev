@@ -1,0 +1,362 @@
+---
+import '../styles/global.css';
+
+const repos = [
+  {
+    "name": "study-buddy",
+    "description": "Provides an offline AI tutoring application built with Electron that runs locally on your computer using Ollama or Llama models, ensuring complete privacy without requiring internet connectivity.",
+    "url": "https://github.com/michael-borck/study-buddy",
+    "language": "TypeScript",
+    "stars": 23,
+    "topics": [
+      "ai",
+      "ai-tutor",
+      "desktop-app",
+      "education",
+      "llama",
+      "local-inference",
+      "offline",
+      "web-app"
+    ]
+  },
+  {
+    "name": "netsim",
+    "description": "Browser-based network simulator for teaching \u2014 real Linux syntax (iproute2, nftables, dig, curl), guided labs, zero install, no backend",
+    "url": "https://github.com/michael-borck/netsim",
+    "language": "TypeScript",
+    "stars": 13,
+    "topics": [
+      "cybersecurity",
+      "education",
+      "firewall",
+      "iptables",
+      "linux",
+      "network-simulator",
+      "networking",
+      "nftables",
+      "react",
+      "teaching-tool",
+      "typescript"
+    ]
+  },
+  {
+    "name": "talk-buddy",
+    "description": "Enables users to practice real-world conversations with an AI partner using speech recognition and text-to-speech in a cross-platform desktop app for interview prep and language learning.",
+    "url": "https://github.com/michael-borck/talk-buddy",
+    "language": "TypeScript",
+    "stars": 7,
+    "topics": [
+      "ai",
+      "conversation-practice",
+      "desktop-app",
+      "education",
+      "english-learning",
+      "interview-prep",
+      "interview-preparation",
+      "web-app"
+    ]
+  },
+  {
+    "name": "slide-stream",
+    "description": "Converts Markdown and PowerPoint presentations into automated videos using AI-powered narration, image sourcing, and text-to-speech synthesis.",
+    "url": "https://github.com/michael-borck/slide-stream",
+    "language": "Python",
+    "stars": 6,
+    "topics": [
+      "ai",
+      "cli",
+      "content-creation",
+      "education",
+      "image-sourcing",
+      "markdown-to-video",
+      "powerpoint",
+      "presentation"
+    ]
+  },
+  {
+    "name": "ethical-hacking-docker-labs",
+    "description": "Provides containerised ethical hacking labs using Docker and Docker Compose for hands-on cybersecurity training, penetration testing, and vulnerability assessment practice.",
+    "url": "https://github.com/michael-borck/ethical-hacking-docker-labs",
+    "language": "Shell",
+    "stars": 4,
+    "topics": [
+      "cybersecurity",
+      "cybersecurity-training",
+      "docker-compose",
+      "hacking-tools",
+      "kali-linux",
+      "security-education",
+      "security-training",
+      "vulnerability-assessment"
+    ]
+  },
+  {
+    "name": "gh-toolkit",
+    "description": "Manages GitHub repositories through CLI commands for categorisation, health checking, topic tagging, and portfolio organisation using LLM-powered automation.",
+    "url": "https://github.com/michael-borck/gh-toolkit",
+    "language": "Python",
+    "stars": 4,
+    "topics": [
+      "ai",
+      "cli",
+      "education",
+      "github-api",
+      "portfolio-management",
+      "repository-health-checking",
+      "site-generator",
+      "topic-tagging"
+    ]
+  },
+  {
+    "name": "cite-sight",
+    "description": "Analyses student assignments to extract citations and references, then verifies their authenticity against academic databases to detect potential academic integrity issues.",
+    "url": "https://github.com/michael-borck/cite-sight",
+    "language": "TypeScript",
+    "stars": 0,
+    "topics": [
+      "academic-integrity",
+      "citation-analysis",
+      "education",
+      "pdf-processing",
+      "research",
+      "research-tools",
+      "vite",
+      "web-app"
+    ]
+  },
+  {
+    "name": "playable-lessons",
+    "description": "Converts educational content into interactive branching stories, flashcards, quizzes, and study materials using AI, available as a desktop app or CLI tool.",
+    "url": "https://github.com/michael-borck/playable-lessons",
+    "language": "TypeScript",
+    "stars": 0,
+    "topics": [
+      "borck-edu",
+      "education"
+    ]
+  },
+  {
+    "name": "lectern",
+    "description": "Lectern enables developers to build and manage documentation sites using modular components and a flexible content structure.",
+    "url": "https://github.com/michael-borck/lectern",
+    "language": "JavaScript",
+    "stars": 0,
+    "topics": [
+      "documentation-generator",
+      "static-site-builder",
+      "web-app"
+    ]
+  },
+  {
+    "name": "career-compass",
+    "description": "Provides AI-powered career guidance and resume analysis through a privacy-first desktop application that processes data locally without sending information to external servers.",
+    "url": "https://github.com/michael-borck/career-compass",
+    "language": "TypeScript",
+    "stars": 0,
+    "topics": [
+      "ai",
+      "ai-powered",
+      "career-guidance",
+      "desktop-app",
+      "education",
+      "local-processing",
+      "resume-analysis",
+      "web-app"
+    ]
+  },
+  {
+    "name": "lesson-loom",
+    "description": "AI-assisted lesson plan generator \u2014 upload teaching material, pick a pedagogical framework, generate and refine structured lesson plans. Static SPA, bring-your-own Anthropic API key.",
+    "url": "https://github.com/michael-borck/lesson-loom",
+    "language": "TypeScript",
+    "stars": 0,
+    "topics": [
+      "ai",
+      "education",
+      "lesson-planning",
+      "pedagogical-framework",
+      "web-app"
+    ]
+  }
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random repository — Michael Borck</title>
+  <meta name="description" content="A random project from Michael Borck's repository portfolio." />
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+
+<a class="corner" href="/">borck<span class="tld">.dev</span></a>
+
+<main>
+  <div class="random-card">
+    <p class="eyebrow">Random repository</p>
+    <h1 class="repo-name" id="repo-name">Picking a repository…</h1>
+    <p class="repo-desc" id="repo-desc"></p>
+    <div class="repo-meta" id="repo-meta"></div>
+    <div class="repo-actions">
+      <a class="button" id="repo-link" href="https://github.com/michael-borck">Open on GitHub →</a>
+      <button class="button secondary" id="reroll" type="button">Pick another</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">borck.dev</a>
+    <a href="https://github.com/michael-borck">GitHub</a>
+    <a href="https://bigpicture.borck.dev">Big picture</a>
+  </div>
+  <p>Michael Borck · Perth, WA</p>
+</footer>
+
+<script is:inline define:vars={{ repos }}>
+  const list = repos;
+  let current = null;
+
+  const nameEl = document.getElementById('repo-name');
+  const descEl = document.getElementById('repo-desc');
+  const metaEl = document.getElementById('repo-meta');
+  const linkEl = document.getElementById('repo-link');
+
+  function addPill(text) {
+    const pill = document.createElement('span');
+    pill.className = 'pill';
+    pill.textContent = text;
+    metaEl.appendChild(pill);
+  }
+
+  function pick() {
+    if (!list.length) return null;
+    let next = list[Math.floor(Math.random() * list.length)];
+    if (list.length > 1) {
+      while (next.name === (current && current.name)) {
+        next = list[Math.floor(Math.random() * list.length)];
+      }
+    }
+    current = next;
+    return next;
+  }
+
+  function render(repo) {
+    nameEl.textContent = repo.name;
+    descEl.textContent = repo.description;
+    metaEl.replaceChildren();
+    if (repo.language) addPill(repo.language);
+    if (repo.stars > 0) addPill('⭐ ' + repo.stars);
+    for (const topic of repo.topics.slice(0, 5)) addPill(topic);
+    linkEl.href = repo.url;
+  }
+
+  function roll() {
+    const repo = pick();
+    if (repo) render(repo);
+  }
+
+  document.getElementById('reroll').addEventListener('click', roll);
+  roll();
+</script>
+
+<style>
+  .random-card {
+    width: 100%;
+    max-width: 780px;
+    padding: 3rem;
+    border: 1px solid var(--gray-3);
+    border-radius: 20px;
+    background:
+      radial-gradient(circle at top right, rgba(99, 102, 241, 0.18), transparent 45%),
+      rgba(255, 255, 255, 0.02);
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .repo-name {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--text);
+    overflow-wrap: anywhere;
+  }
+
+  .repo-desc {
+    color: var(--gray-1);
+    line-height: 1.7;
+    margin-top: 1.25rem;
+    max-width: 60ch;
+  }
+
+  .repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .pill {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--gray-1);
+    border: 1px solid var(--gray-3);
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+  }
+
+  .repo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: transform 0.15s, background 0.15s;
+  }
+
+  .button:hover {
+    transform: translateY(-1px);
+    background: #4f46e5;
+  }
+
+  .button.secondary {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--gray-3);
+    cursor: pointer;
+  }
+
+  .button.secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  @media (max-width: 680px) {
+    .random-card { padding: 2rem; }
+  }
+</style>
+
+</body>
+</html>

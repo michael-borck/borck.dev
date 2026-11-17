@@ -1,9 +1,16 @@
 ---
-import '../styles/global.css';
+import '../styles/tokens.css';
+import { wall, bookHref, type Book } from '../data/wall.ts';
+import BookTile from '../components/BookTile.astro';
+import BookCollageTile from '../components/BookCollageTile.astro';
+import ArtTile from '../components/ArtTile.astro';
+import RetroTile from '../components/RetroTile.astro';
 
-// Canonical Person entity. The shared @id (also used on bigpicture.borck.dev)
-// consolidates the scattered domains into one entity for search + AI answer
-// engines. borck.consulting is intentionally omitted to keep it separate.
+const bySlug = Object.fromEntries(wall.books.map((b) => [b.slug, b]));
+const flagships = (wall.books_wall?.flagships ?? []).map((s) => bySlug[s]).filter(Boolean) as Book[];
+const collageBooks = (wall.books_wall?.collage.slugs ?? []).map((s) => bySlug[s]).filter(Boolean) as Book[];
+const collage = wall.books_wall?.collage;
+
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -31,6 +38,7 @@ const person = {
     'https://resume.borck.dev',
     'https://locolabo.org',
     'https://locoensayo.org',
+    'https://retroverse.studio',
     'https://conversationnotdelegation.com',
     'https://github.com/michael-borck',
     'https://www.linkedin.com/in/michaelborck',
@@ -38,82 +46,142 @@ const person = {
   ],
 };
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael Borck</title>
-  <meta name="description" content="Builder, educator, researcher, and consultant — helping people work with AI, not around it." />
-  <link rel="icon" href="/favicon.svg" />
-  <script type="application/ld+json" set:html={JSON.stringify(person)} />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Borck</title>
+    <meta name="description" content="Builder, educator, researcher, and consultant — helping people work with AI, not around it." />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600&family=Funnel+Sans:wght@400;600&family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+  </head>
+  <body>
+    <a class="corner" href="/">borck<span class="tld">.dev</span></a>
 
-<a class="corner" href="/">borck<span class="tld">.dev</span></a>
+    <main>
+      <header class="masthead">
+        <h1 class="name">Michael<br /><span class="surname">Borck</span></h1>
+        <p class="thesis">
+          Builder, educator, researcher, and consultant — one thesis in four registers:
+          books, tools, research, and consulting, all helping people work with AI, not around it.
+        </p>
+      </header>
 
-<main>
-  <div class="card">
+      <section class="group" id="books">
+        <div class="group-head">
+          <h2>Books</h2>
+          <span class="count">{flagships.length + collageBooks.length} of {wall.books.length}</span>
+          <span class="blurb">most books hang off the first two</span>
+        </div>
+        <div class="grid card-grid">
+          {flagships.map((b) => <BookTile book={b} href={bookHref(b)} />)}
+          {collage && collageBooks.length > 0 && (
+            <BookCollageTile books={collageBooks} title={collage.title} blurb={collage.blurb} href={collage.href} />
+          )}
+        </div>
+      </section>
 
-    <div class="identity">
-      <h1 class="name">
-        Michael<br><span class="surname">Borck</span>
-      </h1>
-      <p class="role">
-        Builder, educator, researcher, and consultant —
-        helping people work with AI, not around it.
-      </p>
-    </div>
+      {wall.groups.map((g) => (
+        <section class="group" id={g.id}>
+          <div class="group-head">
+            <h2>{g.label}</h2>
+            <span class="count">{g.tiles.length + (g.animated ? 1 : 0)}</span>
+            <span class="blurb">{g.blurb}</span>
+          </div>
+          {(g.tiles.length > 0 || g.animated) && (
+            <div class="grid card-grid">
+              {g.animated && (
+                <div class="play-cell">
+                  <RetroTile frames={g.animated.frames} title={g.animated.title} blurb={g.animated.blurb} href={g.href} />
+                </div>
+              )}
+              {g.tiles.map((t) => (
+                <ArtTile
+                  img={t.img}
+                  title={t.title}
+                  blurb={t.blurb}
+                  href={t.href ?? (g.animated ? undefined : g.href)}
+                  tags={g.id === 'tools' ? ['education'] : g.id === 'research' ? ['research'] : []}
+                />
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+    </main>
 
-    <nav class="links">
-      <a class="link" href="https://bigpicture.borck.dev" title="The big picture — all my AI teaching, tools, and research in one place">
-        <span class="link-label">Big picture</span>
-        <span class="link-dest">bigpicture.borck.dev</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a class="link" href="https://borck.education" title="Tools, books, and teaching for educators and students">
-        <span class="link-label">Education</span>
-        <span class="link-dest">borck.education</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a class="link" href="https://borck.consulting" title="AI strategy and education consulting">
-        <span class="link-label">Consulting</span>
-        <span class="link-dest">borck.consulting</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a class="link" href="https://research.borck.dev" title="Academic research, papers, and HCI work">
-        <span class="link-label">Research</span>
-        <span class="link-dest">research.borck.dev</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a class="link" href="https://resume.borck.dev" title="CV in 10 formats from a single YAML data source">
-        <span class="link-label">Resume</span>
-        <span class="link-dest">resume.borck.dev</span>
-        <span class="link-arrow">→</span>
-      </a>
-      <a class="link" href="https://locolabo.org" title="LocoLabo — applied lab studying privacy-first AI on consumer hardware">
-        <span class="link-label">Lab</span>
-        <span class="link-dest">locolabo.org</span>
-        <span class="link-arrow">→</span>
-      </a>
-    </nav>
-
-  </div>
-</main>
-
-<footer>
-  <div class="footer-links">
-    <a href="https://bigpicture.borck.dev">Big picture</a>
-    <a href="https://borck.education">Education</a>
-    <a href="https://borck.consulting">Consulting</a>
-    <a href="https://research.borck.dev">Research</a>
-    <a href="https://resume.borck.dev">Resume</a>
-    <a href="https://locolabo.org">Lab</a>
-    <a href="https://github.com/michael-borck">GitHub</a>
-    <a href="https://linkedin.com/in/michaelborck">LinkedIn</a>
-  </div>
-  <p>Michael Borck · Perth, WA · <a href="mailto:hello@borck.dev">hello@borck.dev</a></p>
-</footer>
+    <footer>
+      <div class="footer-links">
+        <a href="https://bigpicture.borck.dev">Big picture</a>
+        <a href="https://borck.education">Education</a>
+        <a href="https://borck.consulting">Consulting</a>
+        <a href="https://research.borck.dev">Research</a>
+        <a href="https://resume.borck.dev">Resume</a>
+        <a href="https://locolabo.org">Lab</a>
+        <a href="https://retroverse.studio">Play</a>
+        <a href="https://github.com/michael-borck">GitHub</a>
+        <a href="https://linkedin.com/in/michaelborck">LinkedIn</a>
+      </div>
+      <p>Michael Borck · Perth, WA · <a href="mailto:hello@borck.dev">hello@borck.dev</a></p>
+    </footer>
+  
 
 </body>
 </html>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--stage-bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    padding: 48px 24px 96px;
+  }
+  main, footer { max-width: 1160px; margin: 0 auto; }
+  a { color: var(--acc); }
+
+  .corner {
+    position: fixed;
+    top: 20px;
+    left: 24px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--dim);
+    text-decoration: none;
+    z-index: 5;
+  }
+  .corner .tld { color: var(--acc); }
+
+  .masthead { padding: 72px 0 24px; }
+  .name {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+  .surname { color: var(--acc); }
+  .thesis { color: var(--dim); max-width: 640px; line-height: 1.55; margin-top: 18px; }
+
+  .group { margin-top: 64px; }
+  .group-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+  .group-head h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; }
+  .group-head .count { font-family: var(--mono); font-size: 11.5px; color: var(--faint); }
+  .group-head .blurb { font-size: 13px; color: var(--dim); margin-left: auto; text-align: right; }
+
+  .card-grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .card-grid > * { min-width: 0; }
+  .play-row { margin-top: var(--gap); }
+
+  footer { margin-top: 88px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-family: var(--mono); font-size: 12.5px; border-top: 1px solid var(--hair); padding-top: 24px; }
+  .footer-links a { color: var(--dim); text-decoration: none; }
+  .footer-links a:hover { color: var(--acc); }
+  footer p { color: var(--faint); font-size: 13px; margin-top: 16px; }
+</style>

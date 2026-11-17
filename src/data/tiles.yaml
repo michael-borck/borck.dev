@@ -1,0 +1,247 @@
+# Hub wall content for borck.dev — one entry per tile.
+# Schema per docs/hub-mosaic-plan.md; book tiers/parents mirror books-hq/docs/book-tiers.md.
+#
+# The wall shows three standard Books cards: two flagships + one collage card of four
+# covers. Everything else is discovered at books.borck.education. The catalogue below
+# stays complete so books.borck.education (or a future shelf expansion) can use it.
+
+books_wall:
+  flagships: [cnd, heu]
+  collage:
+    slugs: [speak, data, build, silence]
+    title: …and 21 more
+    blurb: the full shelf — four tiers, one system
+    href: https://books.borck.education/
+
+defaults:
+  book_href: https://books.borck.education/
+
+books:
+  # ---- on the wall ----
+  - slug: cnd
+    title: Conversation, Not Delegation
+    tier: books
+    themes: [ai]
+    featured: true
+    bg: '#7C2D12'
+    blurb: think with AI, not just use it
+    href: https://conversationnotdelegation.com/
+  - slug: heu
+    title: The Human Edge
+    tier: books
+    themes: [ai]
+    featured: true
+    bg: '#F2E8D0'
+    blurb: the practice — judgement at work
+    href: https://thehumanedge.borck.dev/
+  - slug: speak
+    title: Speak Software
+    tier: books
+    themes: [programming]
+    featured: true
+    bg: '#134E4A'
+  - slug: data
+    title: Model Data, Verify AI
+    tier: books
+    themes: [ai, programming]
+    featured: true
+    bg: '#1E1B4B'
+  - slug: build
+    title: Build AI, Understand AI
+    tier: experimental
+    themes: [ai]
+    featured: true
+    bg: '#7A4A6B'
+  - slug: silence
+    title: The Great Silence
+    tier: references
+    themes: [ai]
+    featured: true
+    bg: '#1E293B'
+
+  # ---- rest of the catalogue (wall shows these at books.borck.education) ----
+  - slug: pdp
+    title: Partner, Don't Police
+    tier: companions
+    parent: CND
+    themes: [ai, teaching]
+  - slug: prove
+    title: Prove, Don't Persuade
+    tier: companions
+    parent: CND
+    themes: [security, ai]
+  - slug: sda
+    title: Substantiate, Don't Assume
+    tier: companions
+    parent: CND
+    themes: [security, ai]
+  - slug: claim
+    title: Test the Claim, Rate the Control
+    tier: companions
+    parent: SDA
+    themes: [security]
+  - slug: trace
+    title: Follow the Trace, Prove the Case
+    tier: companions
+    parent: SDA
+    themes: [security]
+  - slug: frame
+    title: Frame the System, Guide the AI
+    tier: companions
+    parent: CND·THE
+    themes: [ai]
+  - slug: think
+    title: Think Python, Direct AI
+    tier: companions
+    parent: CND
+    themes: [programming, ai]
+  - slug: code
+    title: Code Python, Consult AI
+    tier: companions
+    parent: CND·THINK
+    themes: [programming]
+  - slug: ship
+    title: Ship Python, Orchestrate AI
+    tier: companions
+    parent: CND·CODE
+    themes: [programming, ai]
+  - slug: cppa
+    title: Converse Python, Partner AI
+    tier: companions
+    parent: CND
+    themes: [programming, ai]
+  - slug: web
+    title: Build Web, Guide AI
+    tier: companions
+    parent: CND
+    themes: [programming]
+  - slug: teach
+    title: Build It, Teach It
+    tier: companions
+    parent: BUILD-AI
+    themes: [teaching]
+  - slug: netsim
+    title: Build the Network, Watch It Run
+    tier: companions
+    parent: CND
+    themes: [simulation, security]
+  - slug: break
+    title: Break with Permission
+    tier: companions
+    parent: AB
+    themes: [security]
+  - slug: packet
+    title: Follow the Packet
+    tier: companions
+    parent: AB·NETSIM
+    themes: [security]
+  - slug: tamymn
+    title: The Absolute Minimum You Must Know
+    tier: references
+    themes: [programming]
+  - slug: aitoys
+    title: AI Toys
+    tier: references
+    themes: [ai]
+  - slug: sectoys
+    title: Security Toys
+    tier: references
+    themes: [security]
+  - slug: paradigms
+    title: One Calculator, Three Paradigms
+    tier: references
+    themes: [programming]
+  - slug: simulate
+    title: Simulate It, Understand It
+    tier: references
+    themes: [simulation]
+  - slug: ab
+    title: Assume Breach
+    tier: experimental
+    themes: [security]
+
+groups:
+  - id: tools
+    label: Tools
+    blurb: 25+ privacy-first tools for educators
+    href: https://tools.borck.education/
+    tiles:
+      - img: tools/book-forge.webp
+        title: Book Forge
+        blurb: Generate complete books with AI
+      - img: tools/lesson-loom.webp
+        title: Lesson Loom
+        blurb: AI-assisted lesson plans
+      - img: tools/feed-forward.webp
+        title: Feed Forward
+        blurb: Local, rubric-based feedback
+
+  - id: research
+    label: Research & Lab
+    blurb: papers, studies and the LocoLabo bench
+    href: https://research.borck.dev/
+    tiles:
+      - img: gap/research.webp
+        title: Research
+        blurb: AI education and HCI studies
+        art: true
+      - img: misc/locolabo-map.webp
+        title: LocoLabo
+        blurb: Frontier AI on a budget
+        href: https://locolabo.org/
+        art: true
+      - img: gap/keep-asking.webp
+        title: Keep Asking
+        blurb: The conversational-nudge RCT
+        art: true
+      - img: gap/cst.webp
+        title: Cognitive Strategy Transfer
+        blurb: Programme · ACIS 2026 poster
+        art: true
+
+  - id: teaching
+    label: Teaching & Decks
+    blurb: workshops, exec-ed and course decks
+    href: https://teach.borck.education/
+    tiles:
+      - img: gap/teaching.webp
+        title: Teaching
+        blurb: Courses and faculty development
+        art: true
+      - img: misc/consulting-og.webp
+        title: Consulting
+        blurb: AI literacy and governance
+        href: https://borck.consulting/
+      - img: gap/decks.webp
+        title: Decks
+        blurb: Course decks in HTML
+        href: https://borck.consulting/decks/
+        art: true
+      - img: misc/bigpicture-og.webp
+        title: Big Picture
+        blurb: The map of everything
+        href: https://bigpicture.borck.dev/
+
+  - id: resume
+    label: Resume
+    blurb: one YAML, twelve ways
+    href: https://resume.borck.dev/
+    tiles:
+      - img: resume/quest.webp
+        title: Quest
+        blurb: CV as a text adventure
+      - img: resume/terminal.webp
+        title: Terminal
+        blurb: CV as a shell session
+      - img: resume/magazine.webp
+        title: Magazine
+        blurb: CV as a feature spread
+
+  - id: play
+    label: Play
+    blurb: RetroVerse Studios — separate register
+    href: https://retroverse.studio/
+    animated:
+      frames: [retro/logo.webp, retro/card-noir.webp, retro/game1.webp]
+      title: RetroVerse Studios
+      blurb: 8-bit worlds, modern intelligence

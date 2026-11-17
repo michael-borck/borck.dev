@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "astro": "^5.7",
+    "js-yaml": "^5.5.0",
     "sharp": "^0.33"
   },
   "overrides": {

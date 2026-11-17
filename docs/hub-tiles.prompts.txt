@@ -1,0 +1,10 @@
+# hub wall gap tiles — limn batch (line-art style, decided 2026-11-17)
+# Style: ivory ink line-art on near-black, gold accents. Matches deck-engine palette.
+# Regenerate any tile:  limn --from docs/hub-tiles.prompts.txt
+# Providers/config: see ~/.limn.yaml (SwarmUI). Metadata sidecars: add -M.
+minimal line-art sketch of an abstract neural network constellation, nodes as small circles connected by thin elegant lines, warm ivory ink lines on a near-black dark charcoal background, a few subtle gold amber accent nodes, editorial illustration style, generous negative space, no text, no letters
+minimal line-art sketch of an open lecture theatre with a lectern and a chalkboard showing simple hand-drawn diagrams and arrows, warm ivory ink lines on a near-black dark charcoal background, subtle gold amber accents, editorial illustration, generous negative space, no text, no letters
+minimal line-art sketch of a small desktop computer tower with its side panel open showing glowing components and a few cables, warm ivory ink lines on a near-black dark charcoal background, subtle gold amber glow accents, editorial illustration, no text, no letters
+minimal line-art sketch of two overlapping speech bubbles with a small thought spark between them, warm ivory ink lines on a near-black dark charcoal background, subtle gold amber accent, editorial illustration, generous negative space, no text, no letters
+minimal line-art sketch of a research conference poster board with a few simple charts pinned on it, warm ivory ink lines on a near-black dark charcoal background, subtle gold amber accents, editorial illustration, no text, no letters
+minimal line-art sketch of a stack of presentation slides fanned out, the front slide showing a simple diagram, warm ivory ink lines on a near-black dark charcoal background, subtle gold amber accents, editorial illustration, no text, no letters

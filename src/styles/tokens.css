@@ -1,0 +1,25 @@
+/* Design tokens for the borck.dev hub wall.
+   Source: deck-engine default theme (theme/tokens.css) — see docs/hub-mosaic-plan.md §2.
+   Gold #E8B54D is deliberately identical to books.borck.education. */
+
+:root {
+  --bg: #0A0C10;
+  --stage-bg: #050608;
+  --ink: #ECE7DB;
+  --dim: rgba(236, 231, 219, 0.64);
+  --faint: rgba(236, 231, 219, 0.32);
+  --hair: rgba(236, 231, 219, 0.15);
+  --card: #10131A;
+  --card2: #141821;
+  --acc: #E8B54D;
+  --green: #6CC59A;
+  --amber: #E8B54D;
+  --red: #E5745A;
+
+  --serif: 'Domine', Georgia, 'Times New Roman', serif;
+  --sans: 'Funnel Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'Nanum Gothic Coding', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --radius: 12px;
+  --gap: 18px;
+}

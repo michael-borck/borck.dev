@@ -95,7 +95,7 @@ const person = {
         <section class="group" id={g.id}>
           <div class="group-head">
             <h2>{g.label}</h2>
-            <span class="count">{g.tiles.length + (g.animated ? 1 : 0)}</span>
+            <span class="count">{g.tiles.length + (g.collage ? 1 : 0) + (g.animated ? 1 : 0)}</span>
             <span class="blurb">{g.blurb}</span>
           </div>
           {(g.tiles.length > 0 || g.animated) && (

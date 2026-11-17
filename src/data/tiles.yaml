@@ -216,19 +216,10 @@ groups:
         title: CloudCore
         blurb: The breach-recovery company
         href: https://cloudcore.eduserver.au/
-      - img: sims/tessera.webp
-        title: Tessera
-        blurb: Essential Eight audit practice
-        href: https://tessera.locoensayo.org/
       - img: sims/technova.webp
         title: TechNova
         blurb: Phishing simulation for outreach
         href: https://technova.eduserver.au/
-        art: true
-      - img: sims/simlab.webp
-        title: SimLab
-        blurb: Build your own, in Python
-        href: https://michael-borck.github.io/sim-lab/
         art: true
 
   - id: teaching

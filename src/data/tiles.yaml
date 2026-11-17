@@ -267,6 +267,11 @@ groups:
       title: RetroVerse Studios
       blurb: 8-bit worlds, modern intelligence
     tiles:
+      - img: gap/blog.webp
+        title: 80-20 Workshop
+        blurb: The personal blog, monthly
+        href: https://8020workshop.com/
+        art: true
       - img: misc/bigpicture-og.webp
         title: Big Picture
         blurb: The argument, warts and all

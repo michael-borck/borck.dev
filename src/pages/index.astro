@@ -2,7 +2,7 @@
 import '../styles/tokens.css';
 import { wall, bookHref, type Book } from '../data/wall.ts';
 import BookTile from '../components/BookTile.astro';
-import BookCollageTile from '../components/BookCollageTile.astro';
+import CollageTile from '../components/CollageTile.astro';
 import ArtTile from '../components/ArtTile.astro';
 import RetroTile from '../components/RetroTile.astro';
 
@@ -81,7 +81,12 @@ const person = {
         <div class="grid card-grid">
           {flagships.map((b) => <BookTile book={b} href={bookHref(b)} />)}
           {collage && collageBooks.length > 0 && (
-            <BookCollageTile books={collageBooks} title={collage.title} blurb={collage.blurb} href={collage.href} />
+            <CollageTile
+              items={collageBooks.map((b) => ({ img: `/tiles/covers/${b.slug}.webp`, bg: b.bg, alt: b.title }))}
+              title={collage.title}
+              blurb={collage.blurb}
+              href={collage.href}
+            />
           )}
         </div>
       </section>
@@ -95,6 +100,14 @@ const person = {
           </div>
           {(g.tiles.length > 0 || g.animated) && (
             <div class="grid card-grid">
+              {g.collage && (
+                <CollageTile
+                  items={g.collage.images.map((img) => ({ img }))}
+                  title={g.collage.title}
+                  blurb={g.collage.blurb}
+                  href={g.href}
+                />
+              )}
               {g.animated && (
                 <div class="play-cell">
                   <RetroTile frames={g.animated.frames} title={g.animated.title} blurb={g.animated.blurb} href={g.href} />
@@ -130,6 +143,7 @@ const person = {
       <p>Michael Borck · Perth, WA · <a href="mailto:hello@borck.dev">hello@borck.dev</a></p>
     </footer>
   
+
 
 
 

@@ -203,6 +203,10 @@ groups:
     label: Simulations
     blurb: rehearse the real thing — simulated organisations for teaching
     href: https://simulations.borck.education/
+    collage:
+      title: All the worlds
+      blurb: the full directory of sims
+      images: [sims/workready.webp, sims/cloudcore.webp, sims/tessera.webp, sims/technova.webp]
     tiles:
       - img: sims/workready.webp
         title: WorkReady

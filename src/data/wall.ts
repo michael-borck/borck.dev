@@ -28,6 +28,7 @@ export interface Group {
   href: string;
   tiles: Tile[];
   animated?: { frames: string[]; title: string; blurb: string };
+  collage?: { title: string; blurb: string; images: string[] };
 }
 
 export interface Wall {

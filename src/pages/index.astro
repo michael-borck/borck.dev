@@ -74,9 +74,9 @@ const person = {
 
       <section class="group" id="books">
         <div class="group-head">
-          <h2>Books</h2>
-          <span class="count">{flagships.length + collageBooks.length} of {wall.books.length}</span>
-          <span class="blurb">most books hang off the first two</span>
+          <h2>Books &amp; Writing</h2>
+          <span class="count">{wall.books.length} works &middot; {wall.books.filter((b) => b.tier === 'books').length} books</span>
+          <span class="blurb">most hang off the first two</span>
         </div>
         <div class="grid card-grid">
           {flagships.map((b) => <BookTile book={b} href={bookHref(b)} />)}
@@ -102,7 +102,7 @@ const person = {
             <div class="grid card-grid">
               {g.collage && (
                 <CollageTile
-                  items={g.collage.images.map((img) => ({ img }))}
+                  items={g.collage.images.map((img) => ({ img: `/tiles/${img}` }))}
                   title={g.collage.title}
                   blurb={g.collage.blurb}
                   href={g.href}

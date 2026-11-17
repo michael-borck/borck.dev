@@ -13,7 +13,7 @@ The decisions in one paragraph: **one trunk (Michael Borck / borck.dev), four de
 | **borck.dev** | everyone | The trunk — "builder, educator, researcher, consultant". **The index**: artifact tiles (books, tools, research, teaching, resume, play) linking out. Register-neutral, one screenful. |
 | **bigpicture.borck.dev** | Curtin colleagues, evaluation panels | **The argument** — twelve honest threads ("what worked, what didn't"), co-built evidence across Curtin, current explorations. Owns narrative and institutional context; the trunk owns listing. Redefined 2026-11-18 after the hub-wall rebuild. |
 | **borck.consulting** | regulated AU small firms (law, medical, accounting, advisory) | Revenue — fixed-scope diagnostics, three tiers |
-| **borck.education** (+ tools./books./minimum. subdomains) | educators / students | Proof-of-work at scale — 25+ free tools, 9 books |
+| **borck.education** (+ tools./books./minimum. subdomains) | educators / students | Proof-of-work at scale — 25+ free tools, 27 works (4 books) |
 | **locolabo.org** | academics / research | Evidence — "we document the floor" (six projects on consumer hardware) |
 | **retroverse.studio** | players / retro hobbyists | Play — separate register, separate GitHub org |
 | **resume.borck.dev** | recruiters / developers | Portfolio piece in itself (one YAML → twelve ways, including an MCP server) |

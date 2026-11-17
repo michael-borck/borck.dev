@@ -217,10 +217,6 @@ groups:
         blurb: Course decks in HTML
         href: https://borck.consulting/decks/
         art: true
-      - img: misc/bigpicture-og.webp
-        title: Big Picture
-        blurb: The map of everything
-        href: https://bigpicture.borck.dev/
 
   - id: resume
     label: Resume
@@ -245,3 +241,15 @@ groups:
       frames: [retro/logo.webp, retro/card-noir.webp, retro/game1.webp]
       title: RetroVerse Studios
       blurb: 8-bit worlds, modern intelligence
+
+  # meta — the argument behind the wall (Curtin-facing narrative, kept off the
+  # trunk's register; see brand-strategy.md §1)
+  - id: map
+    label: The map
+    blurb: twelve threads, one idea
+    href: https://bigpicture.borck.dev/
+    tiles:
+      - img: misc/bigpicture-og.webp
+        title: Big Picture
+        blurb: How it all fits together — and what didn't work
+        art: true

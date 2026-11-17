@@ -10,7 +10,8 @@ The decisions in one paragraph: **one trunk (Michael Borck / borck.dev), four de
 
 | Property | Audience | Job |
 |---|---|---|
-| **borck.dev** | everyone | The trunk — "builder, educator, researcher, consultant" |
+| **borck.dev** | everyone | The trunk — "builder, educator, researcher, consultant". **The index**: artifact tiles (books, tools, research, teaching, resume, play) linking out. Register-neutral, one screenful. |
+| **bigpicture.borck.dev** | Curtin colleagues, evaluation panels | **The argument** — twelve honest threads ("what worked, what didn't"), co-built evidence across Curtin, current explorations. Owns narrative and institutional context; the trunk owns listing. Redefined 2026-11-18 after the hub-wall rebuild. |
 | **borck.consulting** | regulated AU small firms (law, medical, accounting, advisory) | Revenue — fixed-scope diagnostics, three tiers |
 | **borck.education** (+ tools./books./minimum. subdomains) | educators / students | Proof-of-work at scale — 25+ free tools, 9 books |
 | **locolabo.org** | academics / research | Evidence — "we document the floor" (six projects on consumer hardware) |
@@ -22,7 +23,7 @@ The decisions in one paragraph: **one trunk (Michael Borck / borck.dev), four de
 
 ## 2. Architecture: trunk + destination brands
 
-- **Michael Borck / borck.dev is the trunk.** All authority (SEO, LinkedIn, GitHub) compounds on the person. People hire people; institutions cite people.
+- **Michael Borck / borck.dev is the trunk.** All authority (SEO, LinkedIn, GitHub) compounds on the person. People hire people; institutions cite people. Since the 2026-11 wall rebuild, the trunk renders the artifact index; bigpicture.borck.dev stays separate as the Curtin-facing argument (see §1) — its dialogs link only deep artifacts the trunk's tiles don't already cover.
 - **Keep the four destination brands.** Their audiences would bounce off each other's registers — a law-firm partner and an Atari hobbyist need different rooms. Don't merge them; **don't add new ones**.
 - **Wire the endorsement explicitly.** Every product page names its home brand and links the trunk: "a Borck Education tool, by Michael Borck" / "RetroVerse Studios — a Michael Borck project". tools.borck.education already does this; RetroVerse currently doesn't name its owner at all.
   - *RetroVerse is the accepted exception:* players don't care who's behind a game. If it stays unattributed, accept that it builds its own equity and don't expect spillover into the professional brand. If you want the spillover, add the one-line "a Michael Borck project" footer.

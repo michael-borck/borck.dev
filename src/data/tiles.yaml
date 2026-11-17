@@ -256,23 +256,19 @@ groups:
         title: Magazine
         blurb: CV as a feature spread
 
-  - id: play
-    label: Play
-    blurb: RetroVerse Studios — separate register
+  # two coda tiles: the play register, and the argument behind the wall
+  # (bigpicture stays Curtin-facing; see brand-strategy.md §1)
+  - id: play-work
+    label: Play & Work
+    blurb: the studio, and the map
     href: https://retroverse.studio/
     animated:
       frames: [retro/logo.webp, retro/card-noir.webp, retro/game1.webp]
       title: RetroVerse Studios
       blurb: 8-bit worlds, modern intelligence
-
-  # meta — the argument behind the wall (Curtin-facing narrative, kept off the
-  # trunk's register; see brand-strategy.md §1)
-  - id: map
-    label: The map
-    blurb: twelve threads, one idea
-    href: https://bigpicture.borck.dev/
     tiles:
       - img: misc/bigpicture-og.webp
         title: Big Picture
         blurb: The argument, warts and all
+        href: https://bigpicture.borck.dev/
         art: true

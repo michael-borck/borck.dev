@@ -199,6 +199,34 @@ groups:
         blurb: Programme · ACIS 2026 poster
         art: true
 
+  - id: simulations
+    label: Simulations
+    blurb: rehearse the real thing — simulated organisations for teaching
+    href: https://simulations.borck.education/
+    tiles:
+      - img: sims/workready.webp
+        title: WorkReady
+        blurb: A full internship, end to end
+        href: https://workready.eduserver.au/
+      - img: sims/cloudcore.webp
+        title: CloudCore
+        blurb: The breach-recovery company
+        href: https://cloudcore.eduserver.au/
+      - img: sims/tessera.webp
+        title: Tessera
+        blurb: Essential Eight audit practice
+        href: https://tessera.locoensayo.org/
+      - img: sims/technova.webp
+        title: TechNova
+        blurb: Phishing simulation for outreach
+        href: https://technova.eduserver.au/
+        art: true
+      - img: sims/simlab.webp
+        title: SimLab
+        blurb: Build your own, in Python
+        href: https://michael-borck.github.io/sim-lab/
+        art: true
+
   - id: teaching
     label: Teaching & Decks
     blurb: workshops, exec-ed and course decks
@@ -251,5 +279,5 @@ groups:
     tiles:
       - img: misc/bigpicture-og.webp
         title: Big Picture
-        blurb: How it all fits together — and what didn't work
+        blurb: The argument, warts and all
         art: true

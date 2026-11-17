@@ -13,6 +13,7 @@ const JOBS = [
   { dir: 'tools', width: 800, q: 80 },
   { dir: 'resume', width: 800, q: 80 },
   { dir: 'misc', width: 900, q: 82 },
+  { dir: 'sims', width: 800, q: 80 },
   { dir: 'retro', width: 600, q: 88 },
 ];
 

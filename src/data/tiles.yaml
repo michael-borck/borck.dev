@@ -299,6 +299,7 @@ groups:
     label: Simulations
     blurb: rehearse the real thing — simulated organisations for teaching
     href: https://simulations.borck.education/
+    sample: 4
     collage:
       title: All the worlds
       blurb: the full directory of sims
@@ -316,6 +317,25 @@ groups:
         blurb: Build your own, in Python
         href: https://michael-borck.github.io/sim-lab/
         frames: [sims/simlab.webp, gap/simlab-b.webp, gap/simlab-c.webp]
+      - img: sims/retailflow.webp
+        title: RetailFlow
+        blurb: A simulated retail business
+        href: https://retailflow.eduserver.au/
+      - img: sims/netsim.webp
+        title: NetSim
+        blurb: Build networks in the browser
+        href: https://netsim.borck.education/
+        art: true
+      - img: sims/securityaudit.webp
+        title: Security Audit Lab
+        blurb: Audit Tessera against Essential Eight
+        href: https://securityaudit.borck.education/
+        art: true
+      - img: sims/defence.webp
+        title: Defence in Depth
+        blurb: Allocate defences, protect the layers
+        href: https://michael-borck.github.io/defence-in-depth/
+        art: true
 
   - id: teaching
     label: Teaching & Decks
@@ -345,6 +365,7 @@ groups:
     blurb: one YAML, twelve ways — a fresh four on every visit
     href: https://resume.borck.dev/
     sample: 4
+    face: wide
     tiles:
       - img: resume/quest.webp
         title: Quest

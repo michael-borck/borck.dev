@@ -8,11 +8,12 @@ interface Props {
   period?: number;
   mode?: 'fade' | 'kenburns';
   zoom?: number;
+  wide?: boolean;
 }
-const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade', zoom = 1.14 } = Astro.props;
+const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade', zoom = 1.14, wide = false } = Astro.props;
 ---
 
-<a class="retro" href={href} aria-label={title}>
+<a class={`retro${wide ? ' wide' : ''}`} href={href} aria-label={title}>
   <div class="face">
     {mode === 'kenburns' ? (
       <img class="kb" src={`/tiles/${frames[0]}`} alt="" style={`animation-duration:${period}s;animation-delay:-${delay}s;--kb-to:${zoom}`} />
@@ -43,6 +44,7 @@ const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade', zoom 
   }
   .retro:hover { transform: translateY(-4px); border-color: var(--acc); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5); }
   .face { aspect-ratio: 1 / 1; position: relative; overflow: hidden; }
+  .retro.wide .face { aspect-ratio: 800 / 375; }
   .stack { position: absolute; inset: 0; }
   .stack img {
     position: absolute;

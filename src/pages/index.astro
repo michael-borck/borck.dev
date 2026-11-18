@@ -119,12 +119,14 @@ const person = {
           {(g.tiles.length > 0 || g.animated) && (
             <div class="grid card-grid" data-sample={g.sample}>
               {g.collage && (
-                <CollageTile
-                  items={g.collage.images.map((img) => ({ img: `/tiles/${img}` }))}
-                  title={g.collage.title}
-                  blurb={g.collage.blurb}
-                  href={g.href}
-                />
+                <div data-fixed>
+                    <CollageTile
+                    items={g.collage.images.map((img) => ({ img: `/tiles/${img}` }))}
+                    title={g.collage.title}
+                    blurb={g.collage.blurb}
+                    href={g.href}
+                  />
+                </div>
               )}
               {g.animated && (
                 <div class="play-cell">
@@ -140,6 +142,7 @@ const person = {
                     period={t.period}
                     delay={t.delay}
                     zoom={t.zoom}
+                    wide={g.face === 'wide'}
                     title={t.title}
                     blurb={t.blurb}
                     href={t.href ?? g.href}
@@ -150,6 +153,7 @@ const person = {
                     title={t.title}
                     blurb={t.blurb}
                     href={t.href ?? (g.animated ? undefined : g.href)}
+                    wide={g.face === 'wide'}
                     tags={g.id === 'tools' ? ['education'] : g.id === 'research' ? ['research'] : []}
                   />
                 )
@@ -163,9 +167,11 @@ const person = {
     <script is:inline>
       document.querySelectorAll('[data-sample]').forEach((grid) => {
         const n = parseInt(grid.dataset.sample, 10) || 4;
-        const cards = Array.from(grid.children);
-        const deal = cards.slice().sort(() => Math.random() - 0.5).slice(0, n);
-        cards.forEach((c) => { c.hidden = !deal.includes(c); });
+        const kids = Array.from(grid.children);
+        const fixed = kids.filter((k) => k.hasAttribute('data-fixed'));
+        const pool = kids.filter((k) => !k.hasAttribute('data-fixed'));
+        const deal = pool.slice().sort(() => Math.random() - 0.5).slice(0, n - fixed.length);
+        pool.forEach((c) => { c.hidden = !deal.includes(c); });
       });
     </script>
 

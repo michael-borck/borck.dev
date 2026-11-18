@@ -4,14 +4,15 @@ interface Props {
   title: string;
   blurb?: string;
   href: string;
+  delay?: number;
 }
-const { frames, title, blurb, href } = Astro.props;
+const { frames, title, blurb, href, delay = 0 } = Astro.props;
 ---
 
 <a class="retro" href={href} aria-label={title}>
   <div class="face">
     <div class="stack">
-      {frames.map((f, i) => <img src={`/tiles/${f}`} alt="" style={`animation-delay:${i * 4}s`} />)}
+      {frames.map((f, i) => <img src={`/tiles/${f}`} alt="" style={`animation-delay:${i * 4 + delay}s`} />)}
     </div>
   </div>
   <div class="t">

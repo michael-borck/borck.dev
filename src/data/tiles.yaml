@@ -181,23 +181,20 @@ groups:
     blurb: papers, studies and the LocoLabo bench
     href: https://research.borck.dev/
     tiles:
-      - img: gap/research.webp
-        title: Research
+      - title: Research
         blurb: AI education and HCI studies
-        art: true
+        frames: [gap/research.webp, gap/research-b.webp, gap/research-c.webp]
       - img: misc/locolabo-map.webp
         title: LocoLabo
         blurb: Frontier AI on a budget
         href: https://locolabo.org/
         art: true
-      - img: gap/keep-asking.webp
-        title: Keep Asking
+      - title: Keep Asking
         blurb: The conversational-nudge RCT
-        art: true
-      - img: gap/cst.webp
-        title: Cognitive Strategy Transfer
+        frames: [gap/keep-asking.webp, gap/keep-asking-b.webp, gap/keep-asking-c.webp]
+      - title: Cognitive Strategy Transfer
         blurb: Programme · ACIS 2026 poster
-        art: true
+        frames: [gap/cst.webp, gap/cst-b.webp, gap/cst-c.webp]
 
   - id: simulations
     label: Simulations
@@ -216,30 +213,27 @@ groups:
         title: CloudCore
         blurb: The breach-recovery company
         href: https://cloudcore.eduserver.au/
-      - img: sims/simlab.webp
-        title: SimLab
+      - title: SimLab
         blurb: Build your own, in Python
         href: https://michael-borck.github.io/sim-lab/
-        art: true
+        frames: [sims/simlab.webp, gap/simlab-b.webp, gap/simlab-c.webp]
 
   - id: teaching
     label: Teaching & Decks
     blurb: workshops, exec-ed and course decks
     href: https://teach.borck.education/
     tiles:
-      - img: gap/teaching.webp
-        title: Teaching
+      - title: Teaching
         blurb: Courses and faculty development
-        art: true
+        frames: [gap/teaching.webp, gap/teaching-b.webp, gap/teaching-c.webp]
       - img: misc/consulting-og.webp
         title: Consulting
         blurb: AI literacy and governance
         href: https://borck.consulting/
-      - img: gap/decks.webp
-        title: Decks
+      - title: Decks
         blurb: Course decks in HTML
         href: https://borck.consulting/decks/
-        art: true
+        frames: [gap/decks-1.webp, gap/decks-2.webp, gap/decks-3.webp]
 
   - id: resume
     label: Resume
@@ -267,11 +261,10 @@ groups:
       title: RetroVerse Studios
       blurb: 8-bit worlds, modern intelligence
     tiles:
-      - img: gap/blog.webp
-        title: 80-20 Workshop
+      - title: 80-20 Workshop
         blurb: The personal blog, monthly
         href: https://8020workshop.com/
-        art: true
+        frames: [gap/blog-1.webp, gap/blog-2.webp, gap/blog-3.webp]
       - img: misc/bigpicture-og.webp
         title: Big Picture
         blurb: The argument, warts and all

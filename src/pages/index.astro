@@ -120,14 +120,24 @@ const person = {
                   <RetroTile frames={g.animated.frames} title={g.animated.title} blurb={g.animated.blurb} href={g.href} />
                 </div>
               )}
-              {g.tiles.map((t) => (
-                <ArtTile
-                  img={t.img}
-                  title={t.title}
-                  blurb={t.blurb}
-                  href={t.href ?? (g.animated ? undefined : g.href)}
-                  tags={g.id === 'tools' ? ['education'] : g.id === 'research' ? ['research'] : []}
-                />
+              {g.tiles.map((t, i) => (
+                t.frames ? (
+                  <RetroTile
+                    frames={t.frames}
+                    delay={i * 4}
+                    title={t.title}
+                    blurb={t.blurb}
+                    href={t.href ?? g.href}
+                  />
+                ) : (
+                  <ArtTile
+                    img={t.img}
+                    title={t.title}
+                    blurb={t.blurb}
+                    href={t.href ?? (g.animated ? undefined : g.href)}
+                    tags={g.id === 'tools' ? ['education'] : g.id === 'research' ? ['research'] : []}
+                  />
+                )
               ))}
             </div>
           )}

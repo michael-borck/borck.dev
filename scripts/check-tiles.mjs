@@ -10,7 +10,7 @@ const refs = [];
 for (const b of wall.books_wall?.flagships ?? []) refs.push(`covers/${b}.webp`);
 for (const b of wall.books_wall?.collage?.slugs ?? []) refs.push(`covers/${b}.webp`);
 for (const g of wall.groups) {
-  for (const t of g.tiles ?? []) refs.push(t.img);
+  for (const t of g.tiles ?? []) { if (t.img) refs.push(t.img); for (const f of t.frames ?? []) refs.push(f); }
   for (const f of g.animated?.frames ?? []) refs.push(f);
   for (const img of g.collage?.images ?? []) refs.push(img);
 }

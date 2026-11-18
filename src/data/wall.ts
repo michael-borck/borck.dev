@@ -19,6 +19,7 @@ export interface Tile {
   blurb?: string;
   href?: string;
   art?: boolean;
+  frames?: string[];
 }
 
 export interface Group {

@@ -233,10 +233,15 @@ groups:
         title: Consulting
         blurb: AI literacy and governance
         href: https://borck.consulting/
-      - title: Decks
-        blurb: Course decks in HTML
-        href: https://borck.consulting/decks/
+      - title: Deck engine
+        blurb: Markdown in, one HTML file out
+        href: https://deck-engine.borck.dev/
         frames: [gap/decks-1.webp, gap/decks-2.webp, gap/decks-3.webp]
+      - img: gap/cards.webp
+        title: Card decks
+        blurb: 11 printable decks for AI work
+        href: https://borck.consulting/decks/
+        art: true
 
   - id: resume
     label: Resume

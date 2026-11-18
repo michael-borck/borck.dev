@@ -63,7 +63,7 @@ Operational runbook + CI wiring (dormant until `AZURE_SIGNING_ENABLED=true`): [d
 
 - [x] Canonical host is `bigpicture.borck.dev`. No live links to `bigpicture.borck.education` remain (checked 2026-10-31). Add a DNS redirect only if that host resolves.
 - [x] borck.dev now says "twelve ways", matching the portal's twelve cards.
-- [x] resume API consolidated to `api.resume.borck.dev` (2026-11-18). Legacy michaelborck.dev is NXDOMAIN, so all 20 repo references swept; CORS allowlist now borck.dev family + localhost. Pending infra: DNS record for api.resume.borck.dev → VPS, then `docker compose -f api/docker-compose.vps.yml up -d --build` + Caddy reload.
+- [x] resume API consolidated to `api.resume.borck.dev` (2026-11-18). Legacy michaelborck.dev is NXDOMAIN, so all 20 repo references swept; CORS allowlist now borck.dev family + localhost. Infra live 2026-11-18: DNS + container deployed, `/health` healthy, `/profile` serves borck.dev URLs (the VPS had a stale pre-sweep cv-data.yml — fixed with pull + force-recreate).
 - [x] **LocoLab vs LocoLabo**: canonical spelling is LocoLabo. User-facing copy swept 2026-10-31.
 - [ ] NUMERON is listed on tools.borck.education but credited to RetroVerse — settle which brand owns it deliberately (fine either way; make it consistent).
 

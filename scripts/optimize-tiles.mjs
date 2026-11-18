@@ -11,6 +11,7 @@ const JOBS = [
   { dir: 'covers', height: 640, q: 82 },
   { dir: 'gap', width: 800, q: 80 },
   { dir: 'tools', width: 800, q: 80 },
+  { dir: 'tools-roster', width: 800, q: 80 },
   { dir: 'resume', width: 800, q: 80 },
   { dir: 'misc', width: 900, q: 82 },
   { dir: 'sims', width: 800, q: 80 },

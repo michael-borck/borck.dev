@@ -163,18 +163,115 @@ books:
 groups:
   - id: tools
     label: Tools
-    blurb: 25+ privacy-first tools for educators
+    blurb: 26 privacy-first tools for educators — a fresh four on every visit
     href: https://tools.borck.education/
+    sample: 4
     tiles:
-      - img: tools/book-forge.webp
+      - img: tools-roster/assessment-bench.webp
+        title: Assessment Bench
+        blurb: "Runs a cohort through competing…"
+        href: https://assessmentbench.borck.education
+      - img: tools-roster/assessment-lens.webp
+        title: Assessment Lens
+        blurb: "Checks student submissions…"
+        href: https://assessmentlens.borck.education
+      - img: tools-roster/book-forge.webp
         title: Book Forge
-        blurb: Generate complete books with AI
-      - img: tools/lesson-loom.webp
-        title: Lesson Loom
-        blurb: AI-assisted lesson plans
-      - img: tools/feed-forward.webp
+        blurb: "Generates complete books with AI…"
+        href: https://bookforge.borck.education
+      - img: tools-roster/career-compass.webp
+        title: Career Compass
+        blurb: "AI career guidance and resume…"
+        href: https://careercompass.borck.education
+      - img: tools-roster/cite-sight.webp
+        title: Cite Sight
+        blurb: "AI-powered citation and reference…"
+        href: https://citesight.borck.education
+      - img: tools-roster/class-pulse.webp
+        title: Class Pulse
+        blurb: "Real-time audience engagement…"
+        href: https://classpulse.borck.education
+      - img: tools-roster/curriculum-curator.webp
+        title: Curriculum Curator
+        blurb: "AI-powered course content…"
+        href: https://curriculumcurator.borck.education
+      - img: tools-roster/debrief.webp
+        title: Debrief
+        blurb: "Transcribes and analyses…"
+        href: https://debrief.borck.education
+      - img: tools-roster/document-lens.webp
+        title: Document Lens
+        blurb: "Batch analyses PDF documents with…"
+        href: https://documentlens.borck.education
+      - img: tools-roster/ensayo.webp
+        title: Ensayo
+        blurb: "Wix-like simulation generator —…"
+        href: https://ensayo.locoensayo.org
+      - img: tools-roster/ethos-mirror.webp
+        title: Ethos Mirror
+        blurb: "Teaching reflection and…"
+        href: https://ethosmirror.borck.education
+      - img: tools-roster/feed-forward.webp
         title: Feed Forward
-        blurb: Local, rubric-based feedback
+        blurb: "Centralised feedback web app —…"
+        href: https://feedforward.borck.education
+      - img: tools-roster/feed-forward-desktop.webp
+        title: Feed Forward Desktop
+        blurb: "FeedForward's standalone app —…"
+        href: https://feedforwarddesktop.borck.education
+      - img: tools-roster/hands-on-ai.webp
+        title: Hands On Ai
+        blurb: "Educational AI toolkit with…"
+        href: https://handsonai.borck.education
+      - img: tools-roster/headline-hunter.webp
+        title: Headline Hunter
+        blurb: "Turns research papers into press…"
+        href: https://headlinehunter.borck.education
+      - img: tools-roster/insight-lens.webp
+        title: Insight Lens
+        blurb: "Analyses university survey PDFs…"
+        href: https://insightlens.borck.education
+      - img: tools-roster/lesson-loom.webp
+        title: Lesson Loom
+        blurb: "AI-assisted lesson planning —…"
+        href: https://lessonloom.borck.education
+      - img: tools-roster/limn.webp
+        title: Limn
+        blurb: "Type a description, get an image…"
+        href: https://limn.borck.education
+      - img: tools-roster/playable-lessons.webp
+        title: Playable Lessons
+        blurb: "Turn a tutorial or worksheet into…"
+        href: https://playablelessons.borck.education
+      - img: tools-roster/puente.webp
+        title: Puente
+        blurb: "A local-first AI orchestrator —…"
+        href: https://locopuente.org/
+      - img: tools-roster/slide-stream.webp
+        title: Slide Stream
+        blurb: "Turns a Markdown or PowerPoint…"
+        href: https://slidestream.borck.education
+      - img: tools-roster/slinkr.webp
+        title: Slinkr
+        blurb: "The friendly URL toolkit —…"
+        href: https://slinkr.link
+      - img: tools-roster/study-buddy.webp
+        title: Study Buddy
+        blurb: "Desktop AI tutoring with local…"
+        href: https://studybuddy.borck.education
+      - img: tools-roster/style-mirror.webp
+        title: Style Mirror
+        blurb: "Analyzes and mirrors writing…"
+        href: https://stylemirror.eduserver.au
+      - img: tools-roster/talk-buddy.webp
+        title: Talk Buddy
+        blurb: "AI conversation practice with…"
+        href: https://talkbuddy.borck.education
+      - img: tools-roster/venture-lab.webp
+        title: Venture Lab
+        blurb: "AI tools for entrepreneurship…"
+        href: https://venturelab.borck.education
+
 
   - id: research
     label: Research & Lab
@@ -245,8 +342,9 @@ groups:
 
   - id: resume
     label: Resume
-    blurb: one YAML, twelve ways
+    blurb: one YAML, twelve ways — a fresh four on every visit
     href: https://resume.borck.dev/
+    sample: 4
     tiles:
       - img: resume/quest.webp
         title: Quest
@@ -259,6 +357,33 @@ groups:
         title: Magazine
         blurb: CV as a feature spread
         kenburns: true
+      - img: resume/pdf.webp
+        title: PDF
+        blurb: The print-ready classic
+      - img: resume/slides.webp
+        title: Slides
+        blurb: CV as a deck
+      - img: resume/mcp.webp
+        title: MCP
+        blurb: A Model Context server
+      - img: resume/api-docs.webp
+        title: API docs
+        blurb: The OpenAPI spec
+      - img: resume/live-api.webp
+        title: Live API
+        blurb: Served fresh, machine-readable
+      - img: resume/llms.webp
+        title: llms.txt
+        blurb: Written for machines
+      - img: resume/pipeline.webp
+        title: Pipeline
+        blurb: How it is all made
+      - img: resume/html.webp
+        title: HTML
+        blurb: The plain web page
+      - img: resume/source.webp
+        title: Source
+        blurb: One YAML file
 
   # two coda tiles: the play register, and the argument behind the wall
   # (bigpicture stays Curtin-facing; see brand-strategy.md §1)

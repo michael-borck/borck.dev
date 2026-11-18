@@ -117,7 +117,7 @@ const person = {
             <span class="blurb">{g.blurb}</span>
           </div>
           {(g.tiles.length > 0 || g.animated) && (
-            <div class="grid card-grid">
+            <div class="grid card-grid" data-sample={g.sample}>
               {g.collage && (
                 <CollageTile
                   items={g.collage.images.map((img) => ({ img: `/tiles/${img}` }))}
@@ -159,6 +159,15 @@ const person = {
         </section>
       ))}
     </main>
+
+    <script is:inline>
+      document.querySelectorAll('[data-sample]').forEach((grid) => {
+        const n = parseInt(grid.dataset.sample, 10) || 4;
+        const cards = Array.from(grid.children);
+        const deal = cards.slice().sort(() => Math.random() - 0.5).slice(0, n);
+        cards.forEach((c) => { c.hidden = !deal.includes(c); });
+      });
+    </script>
 
     <footer>
       <div class="pill-row">
@@ -241,6 +250,7 @@ const person = {
 
   .card-grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
   .card-grid > * { min-width: 0; }
+  main :global([hidden]) { display: none !important; }
   .play-row { margin-top: var(--gap); }
 
   footer { margin-top: 88px; }

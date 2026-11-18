@@ -163,7 +163,7 @@ books:
 groups:
   - id: tools
     label: Tools
-    blurb: 31 privacy-first tools for educators — a fresh four on every visit
+    blurb: 32 privacy-first tools for educators — a fresh four on every visit
     href: https://tools.borck.education/
     sample: 4
     tiles:
@@ -293,6 +293,10 @@ groups:
         title: Honeyguide
         blurb: Finds and verifies sources
         href: https://honeyguide.eduserver.au/
+      - img: tools-roster/lectern.webp
+        title: Lectern
+        blurb: Synced slide-sharing, self-hosted
+        href: https://lectern.borck.education/
   - id: research
     label: Research & Lab
     blurb: papers, studies and the LocoLabo bench

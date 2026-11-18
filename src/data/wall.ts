@@ -21,6 +21,7 @@ export interface Tile {
   art?: boolean;
   frames?: string[];
   kenburns?: boolean;
+  zoom?: number;
 }
 
 export interface Group {

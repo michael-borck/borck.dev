@@ -7,14 +7,15 @@ interface Props {
   delay?: number;
   period?: number;
   mode?: 'fade' | 'kenburns';
+  zoom?: number;
 }
-const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade' } = Astro.props;
+const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade', zoom = 1.14 } = Astro.props;
 ---
 
 <a class="retro" href={href} aria-label={title}>
   <div class="face">
     {mode === 'kenburns' ? (
-      <img class="kb" src={`/tiles/${frames[0]}`} alt="" style={`animation-duration:${period}s;animation-delay:-${delay}s`} />
+      <img class="kb" src={`/tiles/${frames[0]}`} alt="" style={`animation-duration:${period}s;animation-delay:-${delay}s;--kb-to:${zoom}`} />
     ) : (
       <div class="stack">
         {frames.map((f, i) => <img src={`/tiles/${f}`} alt="" style={`animation:xfade ${period}s infinite;animation-delay:${i * (period / 3) + delay}s`} />)}
@@ -77,8 +78,8 @@ const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade' } = As
     animation-direction: alternate;
   }
   @keyframes kenburns {
-    from { transform: scale(1.02) translate(0, 0); }
-    to { transform: scale(1.14) translate(-1.6%, 1.4%); }
+    from { transform: scale(calc(var(--kb-to) * 0.91)) translate(0, 0); }
+    to { transform: scale(var(--kb-to)) translate(-1.8%, 1.5%); }
   }
   @media (prefers-reduced-motion: reduce) {
     .stack img { animation: none; opacity: 1; }

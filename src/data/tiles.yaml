@@ -196,6 +196,7 @@ groups:
         title: Cognitive Strategy Transfer
         blurb: Programme · ACIS 2026 poster
         kenburns: true
+        zoom: 1.28
 
   - id: simulations
     label: Simulations
@@ -245,12 +246,14 @@ groups:
       - img: resume/quest.webp
         title: Quest
         blurb: CV as a text adventure
+        kenburns: true
       - img: resume/terminal.webp
         title: Terminal
         blurb: CV as a shell session
       - img: resume/magazine.webp
         title: Magazine
         blurb: CV as a feature spread
+        kenburns: true
 
   # two coda tiles: the play register, and the argument behind the wall
   # (bigpicture stays Curtin-facing; see brand-strategy.md §1)

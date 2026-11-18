@@ -163,7 +163,7 @@ books:
 groups:
   - id: tools
     label: Tools
-    blurb: 26 privacy-first tools for educators — a fresh four on every visit
+    blurb: 31 privacy-first tools for educators — a fresh four on every visit
     href: https://tools.borck.education/
     sample: 4
     tiles:
@@ -273,6 +273,26 @@ groups:
         href: https://venturelab.borck.education
 
 
+      - img: tools-roster/lorekeeper.webp
+        title: Lorekeeper
+        blurb: Story-driven learning paths
+        href: https://lorekeeper.borck.education/
+      - img: tools-roster/winnow.webp
+        title: Winnow
+        blurb: Privacy-first literature search
+        href: https://winnow.borck.education/
+      - img: tools-roster/cairn.webp
+        title: Cairn
+        blurb: Personal tutor, runs locally
+        href: https://cairn.borck.education/
+      - img: tools-roster/knotebook.webp
+        title: Knotebook
+        blurb: Branching stories, LLM-friendly
+        href: https://knotebook.borck.education/
+      - img: tools-roster/honeyguide.webp
+        title: Honeyguide
+        blurb: Finds and verifies sources
+        href: https://honeyguide.eduserver.au/
   - id: research
     label: Research & Lab
     blurb: papers, studies and the LocoLabo bench

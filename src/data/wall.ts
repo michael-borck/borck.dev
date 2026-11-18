@@ -20,6 +20,7 @@ export interface Tile {
   href?: string;
   art?: boolean;
   frames?: string[];
+  kenburns?: boolean;
 }
 
 export interface Group {

@@ -11,6 +11,17 @@ const flagships = (wall.books_wall?.flagships ?? []).map((s) => bySlug[s]).filte
 const collageBooks = (wall.books_wall?.collage.slugs ?? []).map((s) => bySlug[s]).filter(Boolean) as Book[];
 const collage = wall.books_wall?.collage;
 
+// stable per-tile timing so shelves never pulse in lockstep
+const hash = (str) => [...str].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
+const timedGroups = wall.groups.map((g) => ({
+  ...g,
+  tiles: g.tiles.map((t, i) => ({
+    ...t,
+    period: t.kenburns ? 22 + (hash(t.title) % 12) : 11 + (hash(t.title) % 6),
+    delay: (hash(g.id + t.title) % 9) + i * 2,
+  })),
+}));
+
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -98,7 +109,7 @@ const person = {
         </div>
       </section>
 
-      {wall.groups.map((g) => (
+      {timedGroups.map((g) => (
         <section class="group" id={g.id}>
           <div class="group-head">
             <h2>{g.label}</h2>
@@ -121,10 +132,13 @@ const person = {
                 </div>
               )}
               {g.tiles.map((t, i) => (
-                t.frames ? (
+                (t.frames || t.kenburns) ? (
                   <RetroTile
-                    frames={t.frames}
+                    frames={t.frames ?? [t.img].filter(Boolean)}
                     delay={i * 4}
+                    mode={t.kenburns ? 'kenburns' : 'fade'}
+                    period={t.period}
+                    delay={t.delay}
                     title={t.title}
                     blurb={t.blurb}
                     href={t.href ?? g.href}

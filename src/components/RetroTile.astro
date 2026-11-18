@@ -5,15 +5,21 @@ interface Props {
   blurb?: string;
   href: string;
   delay?: number;
+  period?: number;
+  mode?: 'fade' | 'kenburns';
 }
-const { frames, title, blurb, href, delay = 0 } = Astro.props;
+const { frames, title, blurb, href, delay = 0, period = 12, mode = 'fade' } = Astro.props;
 ---
 
 <a class="retro" href={href} aria-label={title}>
   <div class="face">
-    <div class="stack">
-      {frames.map((f, i) => <img src={`/tiles/${f}`} alt="" style={`animation-delay:${i * 4 + delay}s`} />)}
-    </div>
+    {mode === 'kenburns' ? (
+      <img class="kb" src={`/tiles/${frames[0]}`} alt="" style={`animation-duration:${period}s;animation-delay:-${delay}s`} />
+    ) : (
+      <div class="stack">
+        {frames.map((f, i) => <img src={`/tiles/${f}`} alt="" style={`animation:xfade ${period}s infinite;animation-delay:${i * (period / 3) + delay}s`} />)}
+      </div>
+    )}
   </div>
   <div class="t">
     <strong>{title}</strong>
@@ -44,7 +50,6 @@ const { frames, title, blurb, href, delay = 0 } = Astro.props;
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: xfade 12s infinite;
   }
   .t {
     padding: 10px 12px 12px;
@@ -60,8 +65,24 @@ const { frames, title, blurb, href, delay = 0 } = Astro.props;
   @keyframes xfade {
     0% { opacity: 0; } 4% { opacity: 1; } 30% { opacity: 1; } 37% { opacity: 0; } 100% { opacity: 0; }
   }
+  .kb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: kenburns;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes kenburns {
+    from { transform: scale(1.02) translate(0, 0); }
+    to { transform: scale(1.14) translate(-1.6%, 1.4%); }
+  }
   @media (prefers-reduced-motion: reduce) {
     .stack img { animation: none; opacity: 1; }
     .stack img + img { opacity: 0; }
+    .kb { animation: none; }
   }
 </style>

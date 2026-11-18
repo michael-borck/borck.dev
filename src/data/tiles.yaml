@@ -192,9 +192,10 @@ groups:
       - title: Keep Asking
         blurb: The conversational-nudge RCT
         frames: [gap/keep-asking.webp, gap/keep-asking-b.webp, gap/keep-asking-c.webp]
-      - title: Cognitive Strategy Transfer
+      - img: gap/cst.webp
+        title: Cognitive Strategy Transfer
         blurb: Programme · ACIS 2026 poster
-        frames: [gap/cst.webp, gap/cst-b.webp, gap/cst-c.webp]
+        kenburns: true
 
   - id: simulations
     label: Simulations
@@ -223,9 +224,10 @@ groups:
     blurb: workshops, exec-ed and course decks
     href: https://teach.borck.education/
     tiles:
-      - title: Teaching
+      - img: gap/teaching.webp
+        title: Teaching
         blurb: Courses and faculty development
-        frames: [gap/teaching.webp, gap/teaching-b.webp, gap/teaching-c.webp]
+        kenburns: true
       - img: misc/consulting-og.webp
         title: Consulting
         blurb: AI literacy and governance
